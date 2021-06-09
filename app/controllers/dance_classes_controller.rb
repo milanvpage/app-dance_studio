@@ -2,7 +2,10 @@ class DanceClassesController < ApplicationController
 
   # GET: /dance_classes
   get "/dance_classes" do
+
+    @dance_classes = DanceClass.all 
     erb :"/dance_classes/index.html"
+    
   end
 
   # GET: /dance_classes/new

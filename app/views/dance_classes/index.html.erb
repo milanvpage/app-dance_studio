@@ -1,1 +1,7 @@
-<h1>This is the Model's index page.</h1>
+<h1> Dance Classes </h1>
+<ul>
+<% @dance_classes.each do |c| %>
+    <li>
+    <%= c.style %></li>
+    <% end %>
+</ul>
