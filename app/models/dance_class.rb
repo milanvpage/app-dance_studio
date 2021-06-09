@@ -1,3 +1,5 @@
 class DanceClass < ActiveRecord::Base
-    belongs_to :dancer
+    has_many :dancers_classes
+    has_many :dancers, through: :dancers_classes
+
 end
