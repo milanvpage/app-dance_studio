@@ -1,1 +1,12 @@
 <h1>Insert the form to edit an instance of your model here.</h1>
+<h1> Edit <%=@dance_class.style%> </h1>
+
+<form method="POST" action="/dance_classes/<%@dance_class.id%>">
+
+<input type="hidden" name="_method" value="PATCH"/>
+
+<p>Style: <input type="text" name="style" value="<%=@dance_class.style%>"/></p>
+<p>Level: <input type="text" name="level" value="<%=@dance_class.level%>"/></p>
+
+<input type="submit" value= "Update Dance Class" id= "submit"/>
+</form>

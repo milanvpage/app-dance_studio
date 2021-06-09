@@ -1,6 +1,11 @@
 <h1> Dance Classes </h1>
-<ul>
+
+
 <% @dance_classes.each do |c| %>
-    <li><%= c.style %></li>
+    <ul>
+    <li>
+    <br>
+    <a href="/dance_classes/<%=c.id%>"><%= c.level %>: <%= c.style %></a>
+    </li>
+    </ul>
     <% end %>
-</ul>
