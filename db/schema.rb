@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_09_000324) do
+ActiveRecord::Schema.define(version: 2021_06_10_021427) do
 
   create_table "dance_classes", force: :cascade do |t|
     t.string "style"
     t.string "level"
-    t.integer "dancer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "dancer_id"
   end
 
   create_table "dancers", force: :cascade do |t|
     t.string "name"
     t.integer "age"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

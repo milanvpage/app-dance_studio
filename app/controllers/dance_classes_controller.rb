@@ -36,9 +36,9 @@ class DanceClassesController < ApplicationController
 
   # PATCH: /dance_classes/5
   patch "/dance_classes/:id" do
-    @dance_class = DanceClass.find_by_id(params[:id])
-    binding.pry
-    #redirect "/dance_classes/:id"
+    @dance_class = DanceClass.find(params[:id])
+    @dance_class.update(params["dance_class"])
+    redirect "/dance_classes/#{@dance_class.id}"
   end
 
   # DELETE: /dance_classes/5/delete

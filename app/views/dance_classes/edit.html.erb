@@ -5,8 +5,8 @@
 
 <input type="hidden" name="_method" value="PATCH"/>
 
-<p>Style: <input type="text" name="style" value="<%=@dance_class.style%>"/></p>
-<p>Level: <input type="text" name="level" value="<%=@dance_class.level%>"/></p>
+<p>Style: <input type="text" name="dance_class[style]" value="<%=@dance_class.style%>"/></p>
+<p>Level: <input type="text" name="dance_class[level]" value="<%=@dance_class.level%>"/></p>
 
 <input type="submit" value= "Update Dance Class" id= "submit"/>
 </form>

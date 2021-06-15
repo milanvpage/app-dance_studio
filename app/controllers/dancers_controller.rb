@@ -1,8 +1,8 @@
 class DancersController < ApplicationController
 
   # GET: /dancers
-  get "/dancers" do
-    erb :"/dancers/index.html"
+  get "/signup" do
+    erb :"/dancers/signup.html"
   end
 
   # GET: /dancers/new
