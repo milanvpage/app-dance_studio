@@ -1,11 +1,17 @@
 <h1> Dance Classes </h1>
-
-
-<% @dance_classes.each do |c| %>
+<% if logged_in? %>
+<h2>If logged in show me Email: <%= current_user.email %></h2>
+<%end%>
     <ul>
-    <li>
     <br>
-    <a href="/dance_classes/<%=c.id%>"><%= c.level %>: <%= c.style %></a>
-    </li>
-    </ul>
+    <% @dance_classes.each do |c| %>
+    <li><a href="/dance_classes/<%=c.id%>"><%= c.level %>: <%= c.style %></a></li>
+    <br>
     <% end %>
+    </ul>
+
+    <br>
+
+    <form method="POST" action="/logout">
+    <input type="submit" value="Log Out"/>
+    </form>
