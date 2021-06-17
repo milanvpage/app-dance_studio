@@ -5,7 +5,7 @@
     <h2><%= current_user.name%></h2>
     <% end %>
     <% @dance_classes.each do |c| %>
-    <li><a href="/dance_classes/<%=c.id%>"><%= c.name %><%= c.level %><%= c.teacher %>
+    <li><a href="/dance_classes/<%=c.id%>"><%= c.name %><%= c.level %>
     <br>
     Instructor: <%= c.teacher %>
     </a></li>
