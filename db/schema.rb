@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_035809) do
+ActiveRecord::Schema.define(version: 2021_06_17_065724) do
 
   create_table "dance_classes", force: :cascade do |t|
-    t.string "style"
+    t.string "teacher"
     t.string "level"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "dancer_id"
-    t.string "teacher"
-    t.string "studio"
     t.integer "studio_id"
+    t.integer "style_id"
   end
 
   create_table "dancers", force: :cascade do |t|
@@ -36,6 +35,10 @@ ActiveRecord::Schema.define(version: 2021_06_17_035809) do
   create_table "studios", force: :cascade do |t|
     t.string "name"
     t.text "address"
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.string "name"
   end
 
 end

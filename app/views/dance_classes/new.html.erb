@@ -3,11 +3,30 @@
 <br>
 <br>
 <form method="POST" action="/dance_classes">
-<p>Style: <input type="text" name="style"/></p>
+<p>Style:</p>
+<select name="style_id"> #name here is the key in the params hash
+<% Style.all.each do |style|%>
+    <option value="<%= style.id%>"><%= style.name %></option>
+    <% end %>
+</select>
+<br>
+<br>
 <p>Level: <input type="text" name="level"/></p>
+<br>
 <p>Teacher: <input type="text" name="teacher"/></p>
-<p>Studio: <input type="text" name="studio"/></p>
+<br>
 <p>Class Description: <input type="text" name="description"/></p>
+<br>
+<p>Studio:</p>
+<select name="studio_id"> #name here is the key in the params hash
+<% Studio.all.each do |studio|%>
+    <option value="<%= studio.id%>"><%= studio.name %></option>
+    <% end %>
+</select>
+<br>
+<br>
+<br>
+<br>
 <input type="submit" value= "Create Dance Class" id= "submit"/>
 </form>
 <br>
