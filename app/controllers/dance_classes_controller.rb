@@ -1,8 +1,7 @@
 class DanceClassesController < ApplicationController
 
   get "/dance_classes" do
-    @studios = Studio.all
-    @styles = Style.all 
+
     @dance_classes = DanceClass.all 
     erb :"/dance_classes/index.html"
     
