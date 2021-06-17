@@ -1,4 +1,3 @@
-<h1>Insert the form to edit an instance of your model here.</h1>
 <h1> Edit <%=@dance_class.style%> </h1>
 
 <form method="POST" action="/dance_classes/<%=@dance_class.id%>">
@@ -7,6 +6,9 @@
 
 <p>Style: <input type="text" name="dance_class[style]" value="<%=@dance_class.style%>"/></p>
 <p>Level: <input type="text" name="dance_class[level]" value="<%=@dance_class.level%>"/></p>
+<p>Teacher: <input type="text" name="dance_class[teacher]" value="<%=@dance_class.teacher%>"/></p>
+<p>Class Description: <input type="text" name="dance_class[description]" value="<%=@dance_class.description%>"/></p>
+
 
 <input type="submit" value= "Update Dance Class" id= "submit"/>
 </form>

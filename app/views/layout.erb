@@ -17,9 +17,33 @@
     <div class="wrapper">
 
 
-
-<a href="/dance_classes">Dance Classes</a> - <a href="/login">Log In</a> - <a href="/signup">Sign Up</a>
-
+<nav>
+<ul>
+<li>
+~<a href="/dance_classes">Dance Classes</a> 
+</li>
+<li>
+<% if !logged_in? %>
+~<a href="/login">Log In</a>
+</li>
+<li>
+~<a href="/signup">Sign Up</a>
+</li>
+<% end %>
+<li>
+<% if logged_in? %>
+~<a href="/dance_classes/new">Create Dance Class</a>
+<br>
+<br>
+    <form method="POST" action="/logout">
+    <input type="submit" value="Log Out"/>
+    </form>
+<% end %>
+</li>
+</ul>
+</nav>
+<br>
+<br>
 
 
 

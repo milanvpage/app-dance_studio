@@ -1,16 +1,18 @@
-<h1>This is the show page for an individual instance of your model.</h1>
 <h1><%= @dance_class.style %><h1>
-<h4><%=@dance_class.level%></h4>
-<% if @dance_class.dancer_id%>
-<h2>Dancer/Dancers: <%=@dance_class.dancer_id%></h4>
-<%else%>
-<h4>Dancer/Dancers:N/A</h4>
-<%end%>
+<h2><%=@dance_class.level%></h2>
+<h1><%= @dance_class.teacher%><h1>
+<h2><%= @dance_class.studio%><h2>
+<h4><%= @dance_class.description%><h4>
+<br>
+<br>
 
-
+<% if @dance_class.dancer == current_user %>
 <a href="/dance_classes/<%=@dance_class.id%>/edit">Edit</a>
-
+<br>
+<br>
 <form method"POST" action="/dance_classes/<%=@dance_class.id%>">
 
 <input name="_method" value="DELETE" type="hidden"/>
 <input type="submit" value="Delete"/>
+</form>
+<% end %>

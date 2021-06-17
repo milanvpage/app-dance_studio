@@ -5,9 +5,9 @@ if ActiveRecord::Base.connection.migration_context.needs_migration?
 end
 use Rack::MethodOverride
 
-run ApplicationController
-use DancersController
+
 use DanceClassesController
 
+use DancersController
 
-
+run ApplicationController
