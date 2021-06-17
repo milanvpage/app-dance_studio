@@ -1,12 +1,14 @@
+
+<h2><%=@dance_class.name%></h2>
 <h2><%=@dance_class.level%></h2>
 <h4><%= @dance_class.description%><h4>
 <br>
 <br>
-#<h2>Studio: <%=@dance_class.studio.try(:name)%></h2>
+<h2>Studio: <%=@dance_class.studio.try(:name)%></h2>
 <br>
-#<h2>Studio: <%=@dance_class.studio.try(:address)%></h2>
+<h2>Studio: <%=@dance_class.studio.try(:address)%></h2>
 <br>
-#<h2>Teacher: <%=@dance_class.teacher.try(:name)%></h2>
+<h2>Teacher: <%=@dance_class.teacher%></h2>
 
 <% if @dance_class.dancer == current_user %>
 <a href="/dance_classes/<%=@dance_class.id%>/edit">Edit</a>

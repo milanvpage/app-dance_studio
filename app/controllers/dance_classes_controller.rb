@@ -9,6 +9,8 @@ class DanceClassesController < ApplicationController
 
   get "/dance_classes/new" do
     redirect_if_not_logged_in
+    @styles = Style.all
+    @studios = Studio.all
 
     erb :"/dance_classes/new.html"
   end

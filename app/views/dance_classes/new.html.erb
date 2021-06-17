@@ -5,8 +5,8 @@
 <form method="POST" action="/dance_classes">
 <p>Style:</p>
 <select name="style_id"> #name here is the key in the params hash
-<% Style.all.each do |style|%>
-    <option value="<%= style.id%>"><%= style.name %></option>
+<% @styles.each do |style|%>
+    <option value="<%= style.id %>"><%= style.name %></option>
     <% end %>
 </select>
 <br>
@@ -15,12 +15,14 @@
 <br>
 <p>Teacher: <input type="text" name="teacher"/></p>
 <br>
+<p>Class Name: <input type="text" name="name"/></p>
+<br>
 <p>Class Description: <input type="text" name="description"/></p>
 <br>
 <p>Studio:</p>
 <select name="studio_id"> #name here is the key in the params hash
-<% Studio.all.each do |studio|%>
-    <option value="<%= studio.id%>"><%= studio.name %></option>
+<% @studios.each do |studio|%>
+    <option value="<%= studio.id %>"><%= studio.name %></option>
     <% end %>
 </select>
 <br>
