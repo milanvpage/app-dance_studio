@@ -1,0 +1,19 @@
+<h1> Portland Studios </h1>
+    <ul>
+    <br>
+    <% if logged_in? %>
+    <h2><%= current_user.name%></h2>
+    <% end %>
+    <% @studios.each do |s| %>
+    <li><a href="/studios/<%=s.id%>"><%= s.name %>
+    <br>
+    <%= s.address %>
+    
+    </a></li>
+    <br>
+    <% end %>
+
+    </ul>
+
+    <br>
+    

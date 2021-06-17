@@ -11,3 +11,4 @@ use DanceClassesController
 use DancersController
 
 run ApplicationController
+use StudiosController

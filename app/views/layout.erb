@@ -22,6 +22,10 @@
 <li>
 ~<a href="/dance_classes">Dance Classes</a> 
 </li>
+<ul>
+<li>
+~<a href="/studios">Studios</a> 
+</li>
 <li>
 <% if !logged_in? %>
 ~<a href="/login">Log In</a>
@@ -33,13 +37,18 @@
 <li>
 <% if logged_in? %>
 ~<a href="/dance_classes/new">Create Dance Class</a>
+</li>
+<% end %>
+<li>
+<% if logged_in? %>
+~<a href="/studios/new">Create Dance Studio</a>
+</li>
+<% end %>
 <br>
 <br>
     <form method="POST" action="/logout">
     <input type="submit" value="Log Out"/>
     </form>
-<% end %>
-</li>
 </ul>
 </nav>
 <br>

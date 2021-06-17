@@ -4,10 +4,30 @@
 <input type="hidden" name="_method" value="PATCH"/>
 
 <p>Teacher: <input type="text" name="dance_class[teacher]" value="<%=@dance_class.teacher%>"/></p>
+
+<br>
+
 <p>Level: <input type="text" name="dance_class[level]" value="<%=@dance_class.level%>"/></p>
-<p>Style: <input type="text" name="dance_class[style_id]" value="<%=@dance_class.style_id%>"/></p>
+
+<br>
+
+<p>Style:</p>
+<select name="style_id"> #name here is the key in the params hash
+<% @styles.each do |style|%>
+    <option value="<%= style.id %>"><%= style.name %></option>
+    <% end %>
+</select>
+<br>
+<br>
+<br>
 <p>Class Description: <input type="text" name="dance_class[description]" value="<%=@dance_class.description%>"/></p>
 
+<br>
 
+<p>Studio: <input type="text" name="studio_id" value="<%=@dance_class.studio.try(:name)%>"/></p>
+<p>Studio Address: <input type="text" name="studio_id" value="<%=@dance_class.studio.try(:address)%>"/></p>
+
+<br>
+<br>
 <input type="submit" value= "Update Dance Class" id= "submit"/>
 </form>
