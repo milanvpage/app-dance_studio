@@ -1,9 +1,9 @@
 # app-dance_studio
 
-This app was created to link all of the Portland dance community together through new classes, master classes, pop up classes, battles, sessions, and regular weekly classes!
-You can "Sing Up", create "Dance Classes" of your own, and view "Dance Classes" previously created by other users.
-You can also view what the Studios are located in the Portland area and associte your "Dance Classes" with a particualr studio when you create them.
-Theres no wrong way to use this app, just be clear to explain details about the class/classes you want to share with the community!
+>This app was created to link all of the Portland dance >community together through new classes, master classes, pop >up classes, battles, sessions, and regular weekly classes!
+>You can "Sing Up", create "Dance Classes" of your own, and >view "Dance Classes" previously created by other users.
+>You can also view what the Studios are located in the >Portland area and associte your "Dance Classes" with a >particualr studio when you create them.
+>Theres no wrong way to use this app, just be clear to explain >details about the class/classes you want to share with the >community!
 
 
 ## Installation
