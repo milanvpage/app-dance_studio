@@ -3,6 +3,6 @@ class Dancer < ActiveRecord::Base
     has_many :studios
     has_many :styles
     validates :name, :age, :email, :password, presence: true
-    validates :email, uniqueness: true
+    validates :email, :name, uniqueness: true
     has_secure_password # "abc" => "shdncjamcumdr"
 end
