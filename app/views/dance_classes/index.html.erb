@@ -2,16 +2,15 @@
     <ul>
     <br>
     <% if logged_in? %>
-    <h2><%= current_user.name%></h2>
+    <h2>Welcome <%= current_user.name%>!</h2>
     <% end %>
     <% @dance_classes.each do |c| %>
-    <li><a href="/dance_classes/<%=c.id%>"><%= c.name %><%= c.level %>
+    <li class="text-info"><a href="/dance_classes/<%=c.id%>"><%= c.name %> : <%= c.level %>
     <br>
     Instructor: <%= c.teacher %>
     </a></li>
     <br>
     <% end %>
-
     </ul>
 
     <br>

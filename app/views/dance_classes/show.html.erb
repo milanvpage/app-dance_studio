@@ -1,20 +1,24 @@
 
-<h2><%=@dance_class.name%></h2>
-<h2><%=@dance_class.level%></h2>
+<h1><%=@dance_class.name%></h1>
+<h3>Level: <%=@dance_class.level%></h3>
+<br>
 <h4><%= @dance_class.description%><h4>
 <br>
+<h2>Style: <%=@dance_class.style.try(:name)%></h2>
+<br>
+<br>
+<h2>Teacher: <%=@dance_class.teacher%></h2>
 <br>
 <h2>Studio: <%=@dance_class.studio.try(:name)%></h2>
 <br>
-<h2>Studio: <%=@dance_class.studio.try(:address)%></h2>
+<h2>Address: <%=@dance_class.studio.try(:address)%></h2>
 <br>
-<h2>Teacher: <%=@dance_class.teacher%></h2>
 
 <% if @dance_class.dancer == current_user %>
 <a href="/dance_classes/<%=@dance_class.id%>/edit">Edit</a>
 <br>
 <br>
-<form method"POST" action="/dance_classes/<%=@dance_class.id%>">
+<form method="POST" action="/dance_classes/<%=@dance_class.id%>">
 
 <input name="_method" value="DELETE" type="hidden"/>
 <input type="submit" value="Delete"/>

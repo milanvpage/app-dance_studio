@@ -6,7 +6,7 @@
 <p>Style:</p>
 <select name="style_id"> #name here is the key in the params hash
 <% @styles.each do |style|%>
-    <option value="<%= style.id %>"><%= style.name %></option>
+    <option value="<%=style.id%>"><%= style.name %></option>
     <% end %>
 </select>
 <br>
@@ -17,7 +17,7 @@
 <br>
 <p>Class Name: <input type="text" name="name"/></p>
 <br>
-<p>Class Description: <input type="text" name="description"/></p>
+<p>Class Description: <textarea rowstype="3" cols="25"<input type="hidden" name="description"/></textarea></p>
 <br>
 <p>Studio:</p>
 <select name="studio_id"> #name here is the key in the params hash
@@ -28,18 +28,7 @@
 <br>
 <br>
 <br>
-<br>
 <input type="submit" value= "Create Dance Class" id= "submit"/>
 </form>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>

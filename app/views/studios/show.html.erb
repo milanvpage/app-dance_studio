@@ -1,20 +1,8 @@
-<h2><%=@studio.name%></h2>
-<h4><%= @studio.address%><h4>
-<br>
-<br>
-<h2>Studio: <%=@studio.dance_class.try(:name)%></h2>
-<br>
-<h2>Studio: <%=@studio.dance_class.try(:level)%></h2>
-<br>
-<h2>Studio: <%=@studio.dance_class.try(:teacher)%></h2>
 
-<% if @studio.dancer == current_user %>
-<a href="/studios/<%=@studio.id%>/edit">Edit</a>
+<h1>Click Link Here to Visit <%=@studio.name%></h1>
 <br>
+<h1>Website:</h1><a href="<%=@studio.url%>"><h1><%=@studio.name%></h1></a>
 <br>
-<form method"POST" action="/studios/<%=@studio.id%>">
+<h4><%=@studio.address%><h4>
+<br>
 
-<input name="_method" value="DELETE" type="hidden"/>
-<input type="submit" value="Delete"/>
-</form>
-<% end %>

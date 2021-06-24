@@ -22,6 +22,7 @@ class ApplicationController < Sinatra::Base
       #binding.pry
       !!current_user
     end
+
   end
 
   private

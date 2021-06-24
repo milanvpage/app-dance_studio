@@ -1,7 +1,6 @@
 class DanceClassesController < ApplicationController
 
   get "/dance_classes" do
-
     @dance_classes = DanceClass.all 
     erb :"/dance_classes/index.html"
     
@@ -11,6 +10,7 @@ class DanceClassesController < ApplicationController
     redirect_if_not_logged_in
     @styles = Style.all
     @studios = Studio.all
+    @dance_classes = DanceClass.all 
 
     erb :"/dance_classes/new.html"
   end
@@ -24,14 +24,12 @@ class DanceClassesController < ApplicationController
 
   get "/dance_classes/:id/edit" do
     redirect_if_not_logged_in
+    @dance_class = DanceClass.find_by_id(params[:id])
 
     @styles = Style.all
     @studios = Studio.all
-
-    @dance_class = DanceClass.find_by_id(params[:id])
-
     redirect_if_not_authorized
-    
+
     erb :"/dance_classes/edit.html"
   end
 
@@ -51,8 +49,8 @@ class DanceClassesController < ApplicationController
 
   patch "/dance_classes/:id" do
     redirect_if_not_logged_in
-    
     @dance_class = DanceClass.find(params[:id])
+    @studio = Studio.find_by_id(params[:id])
 
     redirect_if_not_authorized
 
@@ -60,15 +58,16 @@ class DanceClassesController < ApplicationController
     redirect "/dance_classes/#{@dance_class.id}"
   end
 
-  delete "/dance_classes/:id/delete" do
-    redirect_if_not_logged_in
-    
-    @dance_class = DanceClass.find_by_id(params[:id])
+  delete "/dance_classes/:id" do
 
+    redirect_if_not_logged_in
+    @dance_class = DanceClass.find_by_id(params[:id])
     redirect_if_not_authorized
 
-    @dance_class.destroy
+    @dance_class.delete
+
     redirect "/dance_classes"
+
   end
 
   private

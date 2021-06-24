@@ -9,20 +9,27 @@
 
     <title>Dance Studio</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="/stylesheets/main.css" />
-  </head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+  
+</head>
   <body>
     <div class="wrapper">
 
-
+<header>
 <nav>
 <ul>
 <li>
+~<a href="/">Welcome</a> 
+</li>
+<li>
 ~<a href="/dance_classes">Dance Classes</a> 
 </li>
-<ul>
 <li>
 ~<a href="/studios">Studios</a> 
 </li>
@@ -39,18 +46,17 @@
 ~<a href="/dance_classes/new">Create Dance Class</a>
 </li>
 <% end %>
-<li>
 <% if logged_in? %>
-~<a href="/studios/new">Create Dance Studio</a>
-</li>
-<% end %>
+</header>
 <br>
 <br>
-    <form method="POST" action="/logout">
-    <input type="submit" value="Log Out"/>
-    </form>
+<form method="POST" action="/logout">
+<input type="submit" value="Log Out"/>
+</form>
 </ul>
+<% end %>
 </nav>
+
 <br>
 <br>
 
@@ -61,7 +67,7 @@
 
         
       <footer class="branding">
-        <small>&copy; 2021 <strong>AppDanceStudio</strong></small>
+        <small>&copy; 2021 <strong>App PDX Dance Classes</strong></small>
       </footer>
     </div>
 

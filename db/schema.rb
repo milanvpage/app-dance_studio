@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_073402) do
+ActiveRecord::Schema.define(version: 2021_06_23_164526) do
 
   create_table "dance_classes", force: :cascade do |t|
     t.string "teacher"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_073402) do
     t.integer "studio_id"
     t.integer "style_id"
     t.string "name"
+    t.date "date"
+    t.time "time"
   end
 
   create_table "dancers", force: :cascade do |t|
@@ -36,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_073402) do
   create_table "studios", force: :cascade do |t|
     t.string "name"
     t.text "address"
+    t.integer "dancer_id"
+    t.string "url"
   end
 
   create_table "styles", force: :cascade do |t|

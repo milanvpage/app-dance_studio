@@ -1,7 +1,11 @@
-
+<h1>Edit Dance Class</h1>
 <form method="POST" action="/dance_classes/<%=@dance_class.id%>">
 
-<input type="hidden" name="_method" value="PATCH"/>
+<input type="hidden" name="_method" value="PATCH" />
+
+<p>Class Name: <input type="text" name="dance_class[name]" value="<%=@dance_class.name%>"/></p>
+
+<br>
 
 <p>Teacher: <input type="text" name="dance_class[teacher]" value="<%=@dance_class.teacher%>"/></p>
 
@@ -20,12 +24,17 @@
 <br>
 <br>
 <br>
-<p>Class Description: <input type="text" name="dance_class[description]" value="<%=@dance_class.description%>"/></p>
+
+<p>Class Description: <textarea rowstype="3" cols="25"<input type="hidden" name="dance_class[description]"/><%=@dance_class.description%></textarea></p>
 
 <br>
 
-<p>Studio: <input type="text" name="studio_id" value="<%=@dance_class.studio.try(:name)%>"/></p>
-<p>Studio Address: <input type="text" name="studio_id" value="<%=@dance_class.studio.try(:address)%>"/></p>
+<p>Studio:</p>
+<select name="studio_id"> #name here is the key in the params hash
+<% @studios.each do |studio|%>
+    <option value="<%= studio.id %>"><%= studio.name %></option>
+    <% end %>
+</select>
 
 <br>
 <br>

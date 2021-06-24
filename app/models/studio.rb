@@ -1,5 +1,6 @@
 class Studio < ActiveRecord::Base
-    has_many :dance_classes
-    has_many :teachers, through: :dance_classes
-    belongs_to :dancer
+    has_many :dance_classes 
+    has_many :styles, through: :dance_classes
+    validates :name, presence: true
+
 end
